@@ -1,0 +1,9 @@
+{
+  "extends": "@skyra/eslint-config",
+  "rules": {
+    "no-warning-comments": 0,
+    "no-process-env": 0,
+    "no-inline-comments": 0,
+    "@typescript-eslint/naming-convention": 0
+  }
+}
