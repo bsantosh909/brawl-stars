@@ -49,23 +49,23 @@ The above example is just a basic example. You can do lot more with the package.
 - `Client`**.brawler(brawlerId)**
   - Get information about the specified brawler.
 
-- `Client`**.clubRankings(country, [Options](###%20Search%20Options))**
+- `Client`**.clubRankings(country, Options)**
   - Get club rankings for specified country.
   - `country` is optional. If not specified is default to **global**
 
-- `Client`**.playerRankings(country, [Options](###%20Search%20Options))**
+- `Client`**.playerRankings(country, Options)**
   - Get player rankings for specified country.
   - `country` is optional. If not specified is default to **global**
   
-- `Client`**.brawlerRankings(brawlerId, country, [Options](###%20Search%20Options))**
+- `Client`**.brawlerRankings(brawlerId, country, Options)**
   - Get club rankings for specified country.
   - `country` is optional. If not specified is default to **global**
 
-- `Client`**.powerPlayRankings(brawlerId, country, [Options](###%20Search%20Options))**
+- `Client`**.powerPlayRankings(brawlerId, country, Options)**
   - Get powerplay rankings for specified country.
   - `country` is optional. If not specified is default to **global**
 
-- `Client`**.powerPlaySeasons(country, [Options](###%20Search%20Options))**
+- `Client`**.powerPlaySeasons(country, Options)**
   - Get powerplay seasons.
   - `country` is optional. If not specified is default to **global**
 
