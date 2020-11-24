@@ -1,5 +1,5 @@
 {
-	"name": "brawl-stars",
+	"name": "@statscell/brawl",
 	"version": "1.0.0",
 	"description": "Client and event handler for brawl stars",
 	"main": "dist/index.js",
