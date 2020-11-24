@@ -13,9 +13,9 @@ npm install brawl-stars
 Use the package as:
 
 ```js
-import { Client } from 'brawl-stars';
+import { Client } from '@statscell/brawl';
 // OR
-const { Client } = require('brawl-stars');
+const { Client } = require('@statscell/brawl');
 
 // token can be obtained from https://developers.brawlstars.com/
 const client = new Client({ token: 'token-from-dev-portal' });
