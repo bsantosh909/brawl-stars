@@ -92,7 +92,7 @@ interface SearchOptions {
 	after: string;
 }
 
-export interface Player {
+interface Player {
 	icon: { id: number };
 	tag: string;
 	name: string;
@@ -164,15 +164,15 @@ interface PlayerBattle {
 	};
 }
 
-export interface PlayerBattles {
+interface PlayerBattles {
 	items: PlayerBattle[];
 }
 
-export interface ClubMembers {
+interface ClubMembers {
 	items: ClubMember[];
 }
 
-export interface ClubMember {
+interface ClubMember {
 	icon: {
 		id: number;
 	};
@@ -183,7 +183,7 @@ export interface ClubMember {
 	nameColor: string;
 }
 
-export interface Club {
+interface Club {
 	tag: string;
 	name: string;
 	description: string;
@@ -194,11 +194,11 @@ export interface Club {
 	members: ClubMember[];
 }
 
-export interface Brawlers {
+interface Brawlers {
 	items: Brawler[];
 }
 
-export interface Brawler {
+interface Brawler {
 	name: string;
 	id: number;
 	starPowers: [{
@@ -211,7 +211,7 @@ export interface Brawler {
 	}];
 }
 
-export interface Rankings {
+interface Rankings {
 	items: [{
 		club?: { name: string };
 		icons: { id: number };
@@ -223,7 +223,7 @@ export interface Rankings {
 	}];
 }
 
-export interface ClubRankings {
+interface ClubRankings {
 	items: [{
 		tag: string;
 		name: string;
@@ -234,7 +234,7 @@ export interface ClubRankings {
 	}];
 }
 
-export interface Seasons {
+interface Seasons {
 	items: [{
 		id: string;
 		startTime: string;
