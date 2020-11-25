@@ -1,4 +1,4 @@
-# brawl-stars
+# @statscell/brawl
 
 Node.js client for working with brawl stars API.
 
@@ -7,7 +7,7 @@ Node.js client for working with brawl stars API.
 Install the package using:
 
 ```bash
-npm install brawl-stars
+npm install @statscell/brawl
 ```
 
 Use the package as:
@@ -20,7 +20,7 @@ const { Client } = require('@statscell/brawl');
 // token can be obtained from https://developers.brawlstars.com/
 const client = new Client({ token: 'token-from-dev-portal' });
 
-client.player('YJ0LVRQQ')
+client.getPlayer('YJ0LVRQQ')
   .then((player) => {
    console.log(`${player.name} - ${player.tag}`);
   })
@@ -31,41 +31,41 @@ The above example is just a basic example. You can do lot more with the package.
 
 ## Available Methods
 
-- `Client`**.player(playerTag)**
+- `Client`**.getPlayer(playerTag)**
   - Get information about specified player tag.
 
-- `Client`**.playerBattles(playerTag)**
+- `Client`**.getPlayerBattles(playerTag)**
   - Get battles of specified player tag.
 
-- `Client`**.club(clubTag)**
+- `Client`**.getClub(clubTag)**
   - Get information about specified club tag.
 
-- `Client`**.clubMembers(clubTag)**
+- `Client`**.getClubMembers(clubTag)**
   - Get members of specified club tag.
 
-- `Client`**.brawlers()**
+- `Client`**.getBrawlers()**
   - Get information about all the brawlers.
 
-- `Client`**.brawler(brawlerId)**
+- `Client`**.getBrawler(brawlerId)**
   - Get information about the specified brawler.
 
-- `Client`**.clubRankings(country, Options)**
+- `Client`**.getClubRankings(country, Options)**
   - Get club rankings for specified country.
   - `country` is optional. If not specified is default to **global**
 
-- `Client`**.playerRankings(country, Options)**
+- `Client`**.getPlayerRankings(country, Options)**
   - Get player rankings for specified country.
   - `country` is optional. If not specified is default to **global**
   
-- `Client`**.brawlerRankings(brawlerId, country, Options)**
+- `Client`**.getBrawlerRankings(brawlerId, country, Options)**
   - Get club rankings for specified country.
   - `country` is optional. If not specified is default to **global**
 
-- `Client`**.powerPlayRankings(brawlerId, country, Options)**
+- `Client`**.getPowerPlayRankings(brawlerId, country, Options)**
   - Get powerplay rankings for specified country.
   - `country` is optional. If not specified is default to **global**
 
-- `Client`**.powerPlaySeasons(country, Options)**
+- `Client`**.getPowerPlaySeasons(country, Options)**
   - Get powerplay seasons.
   - `country` is optional. If not specified is default to **global**
 

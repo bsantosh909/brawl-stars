@@ -13,59 +13,59 @@ export class Client {
 		this.timeout = options.timeout || 0;
 	}
 
-	public player(playerTag: string): Promise<Player> {
+	public getPlayer(playerTag: string): Promise<Player> {
 		const tag = validateTag(playerTag);
 		if (!tag) throw new Error('INALID_TAG');
 		return this.fetch(`/players/${tag}`);
 	}
 
-	public playerBattles(playerTag: string): Promise<PlayerBattles> {
+	public getPlayerBattles(playerTag: string): Promise<PlayerBattles> {
 		const tag = validateTag(playerTag);
 		if (!tag) throw new Error('INVALID_TAG');
 		return this.fetch(`/players/${tag}/battlelog`);
 	}
 
-	public club(clubTag: string): Promise<Club> {
+	public getClub(clubTag: string): Promise<Club> {
 		const tag = validateTag(clubTag);
 		if (!tag) throw new Error('INVALID_TAG');
 		return this.fetch(`/clubs/${tag}`);
 	}
 
-	public clubMembers(clubTag: string): Promise<ClubMembers> {
+	public getClubMembers(clubTag: string): Promise<ClubMembers> {
 		const tag = validateTag(clubTag);
 		if (!tag) throw new Error('INVALID_TAG');
 		return this.fetch(`/clubs/${tag}/members`);
 	}
 
-	public brawlers(): Promise<Brawlers> {
+	public getBrawlers(): Promise<Brawlers> {
 		return this.fetch('/brawlers');
 	}
 
-	public brawler(brawlerId: string | number): Promise<Brawler> {
+	public getBrawler(brawlerId: string | number): Promise<Brawler> {
 		return this.fetch(`/brawlers/${brawlerId}`);
 	}
 
-	public clubRankings(countryCode = 'global', options?: SearchOptions): Promise<ClubRankings> {
+	public getClubRankings(countryCode = 'global', options?: SearchOptions): Promise<ClubRankings> {
 		if (countryCode !== 'global' && countryCode.length !== 2) throw new Error('INCORRECT_COUNTRY_CODE');
 		return this.fetch(`/ranking/${countryCode}/clubs`, options);
 	}
 
-	public playerRankings(countryCode = 'global', options?: SearchOptions): Promise<Rankings> {
+	public getPlayerRankings(countryCode = 'global', options?: SearchOptions): Promise<Rankings> {
 		if (countryCode !== 'global' && countryCode.length !== 2) throw new Error('INCORRECT_COUNTRY_CODE');
 		return this.fetch(`/rankings/${countryCode}/players`, options);
 	}
 
-	public brawlerRanking(brawlerId: string | number, countryCode = 'global', options?: SearchOptions): Promise<Rankings> {
+	public getBrawlerRanking(brawlerId: string | number, countryCode = 'global', options?: SearchOptions): Promise<Rankings> {
 		if (countryCode !== 'global' && countryCode.length !== 2) throw new Error('INCORRECT_COUNTRY_CODE');
 		return this.fetch(`/rankings/${countryCode}/brawlers/${brawlerId}`, options);
 	}
 
-	public powerPlayRankings(seasonId: string, countryCode = 'global', options?: SearchOptions): Promise<Rankings> {
+	public getPowerPlayRankings(seasonId: string, countryCode = 'global', options?: SearchOptions): Promise<Rankings> {
 		if (countryCode !== 'global' && countryCode.length !== 2) throw new Error('INCORRECT_COUNTRY_CODE');
 		return this.fetch(`/rankings/${countryCode}/powerplay/seasons/${seasonId}`, options);
 	}
 
-	public powerPlaySeasons(countryCode = 'global', options?: SearchOptions): Promise<Seasons> {
+	public getPowerPlaySeasons(countryCode = 'global', options?: SearchOptions): Promise<Seasons> {
 		if (countryCode !== 'global' && countryCode.length !== 2) throw new Error('INCORRECT_COUNTRY_CODE');
 		return this.fetch(`/rankings/${countryCode}/powerplay/seasons`, options);
 	}
