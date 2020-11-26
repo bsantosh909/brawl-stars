@@ -18,12 +18,13 @@ export async function fetchURL(url: string, token: string, timeout: number) {
 	});
 	if (res.status !== 200) return { response: { status: res.status, ok: res.status === 200 } };
 	const output = await res.json();
-	return Object.assign(output, {
+	return {
+		...output,
 		response: {
 			status: res.status,
 			ok: res.status === 200
 		}
-	});
+	};
 }
 
 export function parseSupercellTime(time: string) {
