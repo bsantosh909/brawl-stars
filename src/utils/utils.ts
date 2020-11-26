@@ -25,3 +25,7 @@ export async function fetchURL(url: string, token: string, timeout: number) {
 		}
 	});
 }
+
+export function parseSupercellTime(time: string) {
+	return new Date(`${time.slice(0, 4)}-${time.slice(4, 6)}-${time.slice(6, 8)}T${time.slice(9, 11)}:${time.slice(11, 13)}:${time.slice(13)}`).getTime();
+}
