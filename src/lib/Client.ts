@@ -1,5 +1,5 @@
 import { validateTag, fetchURL } from '../utils/utils';
-import { Player, PlayerBattles, Club, ClubMembers, Brawlers, Brawler, ClubRankings, Rankings, Seasons } from '../types';
+import { Player, PlayerBattles, Club, ClubMembers, Brawlers, Brawler, ClubRankings, Rankings, Seasons } from './types';
 import qs from 'querystring';
 
 export class Client {

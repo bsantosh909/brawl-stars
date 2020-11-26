@@ -1,6 +1,6 @@
 import { Events } from '../lib/Events';
 import { parseSupercellTime } from './utils';
-import { Player, Club, PlayerBattles } from '../types';
+import { Player, Club, PlayerBattles } from '../lib/types';
 
 export function handlePlayerUpdate(client: Events, player: Player) {
 	const oldPlayer: Player = client.players.get(player.tag);
