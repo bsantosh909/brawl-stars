@@ -19,22 +19,16 @@ export interface Player {
 		tag: string;
 		name: string;
 	};
-	brawlers: [{
+	brawlers: {
 		id: number;
 		rank: number;
 		trophies: number;
 		highestTrophies: number;
 		power: number;
 		name: string;
-		starPowers: [{
-			name: string;
-			id: number;
-		}] | [];
-		gadgets: [{
-			name: string;
-			id: number;
-		}] | [];
-	}];
+		starPowers: SPGadget[];
+		gadgets: SPGadget[];
+	}[];
 	response: Response;
 }
 
@@ -72,16 +66,14 @@ export interface PlayerBattles {
 }
 
 export interface ClubMembers {
-	items: [{
-		icon: {
-			id: number;
-		};
+	items: {
+		icon: { id: number };
 		tag: string;
 		name: string;
 		trophies: number;
 		role: string;
 		nameColor: string;
-	}];
+	}[];
 	response: Response;
 }
 
@@ -93,16 +85,14 @@ export interface Club {
 	requiredTrophies: number;
 	type: string;
 	badgeId: number;
-	members: [{
-		icon: {
-			id: number;
-		};
+	members: {
+		icon: { id: number };
 		tag: string;
 		name: string;
 		trophies: number;
 		role: string;
 		nameColor: string;
-	}];
+	}[];
 	response: Response;
 }
 
@@ -114,19 +104,13 @@ export interface Brawlers {
 export interface Brawler {
 	name: string;
 	id: number;
-	starPowers: [{
-		id: number;
-		name: string;
-	}];
-	gadgest: [{
-		id: number;
-		name: string;
-	}];
+	starPowers: SPGadget[];
+	gadgest: SPGadget[];
 	response: Response;
 }
 
 export interface Rankings {
-	items: [{
+	items: {
 		club?: { name: string };
 		icons: { id: number };
 		tag: string;
@@ -134,32 +118,37 @@ export interface Rankings {
 		rank: number;
 		trophies: number;
 		nameColor: string;
-	}];
+	}[];
 	response: Response;
 }
 
 export interface ClubRankings {
-	items: [{
+	items: {
 		tag: string;
 		name: string;
 		trophies: number;
 		rank: number;
 		memberCount: number;
 		badgeId: number;
-	}];
+	}[];
 	response: Response;
 }
 
 export interface Seasons {
-	items: [{
+	items: {
 		id: string;
 		startTime: string;
 		endTime: string;
-	}];
+	}[];
 	response: Response;
 }
 
 interface Response {
 	status: number;
 	ok: boolean;
+}
+
+interface SPGadget {
+	id: number;
+	name: string;
 }
