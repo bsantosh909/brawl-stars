@@ -4,3 +4,6 @@ node_modules/
 dist/tsconfig.tsbuildinfo
 src/
 *.log
+.eslintrc.json
+tsconfig.base.json
+tsconfig.eslint.json
