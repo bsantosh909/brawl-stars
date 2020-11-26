@@ -66,14 +66,7 @@ export interface PlayerBattles {
 }
 
 export interface ClubMembers {
-	items: {
-		icon: { id: number };
-		tag: string;
-		name: string;
-		trophies: number;
-		role: string;
-		nameColor: string;
-	}[];
+	items: ClubMember[];
 	response: Response;
 }
 
@@ -85,14 +78,7 @@ export interface Club {
 	requiredTrophies: number;
 	type: string;
 	badgeId: number;
-	members: {
-		icon: { id: number };
-		tag: string;
-		name: string;
-		trophies: number;
-		role: string;
-		nameColor: string;
-	}[];
+	members: ClubMember[];
 	response: Response;
 }
 
@@ -151,4 +137,13 @@ interface Response {
 interface SPGadget {
 	id: number;
 	name: string;
+}
+
+interface ClubMember {
+	icon: { id: number };
+	tag: string;
+	name: string;
+	trophies: string;
+	role: string;
+	nameColor: string;
 }
